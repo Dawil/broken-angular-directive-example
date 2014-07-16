@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="script.js"></script>
+    <style>
+      .single {
+        display: inline-block;
+        padding: 5px;
+        background-color:gray;
+        margin: 20px;
+      }
+      .group {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+
+  <body ng-app="Example">
+    <div ng-controller="Ctrl">
+        <my-group class="group" shared-prop="messages">
+            <my-single class="single" single-prop="greeting">Yay</my-single>
+            <my-single class="single" single-prop="farewell">Aww</my-single>
+        </my-group>
+    </div>
+</body>
+
+</html>
